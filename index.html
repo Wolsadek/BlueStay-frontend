@@ -6,12 +6,79 @@
 -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Hello World</h1>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <header>
+            <section class="search-section">
+                <div class="search-container">
+                    <form class="search-form" action="#" method="get">
+                        
+                        <!-- Campo: Buscar Destino -->
+                        <div class="search-field">
+                            <label for="destino">Onde</label>
+                            <input 
+                                type="text" 
+                                id="destino" 
+                                name="destino" 
+                                placeholder="Buscar destinos"
+                                required
+                            >
+                        </div>
+            
+                        <!-- Campo: Data de Entrada -->
+                        <div class="search-field">
+                            <label for="entrada">Data de entrada</label>
+                            <input 
+                                type="date" 
+                                id="entrada" 
+                                name="entrada"
+                                required
+                            >
+                        </div>
+            
+                        <!-- Campo: Data de Saída -->
+                        <div class="search-field">
+                            <label for="saida">Data de saída</label>
+                            <input 
+                                type="date" 
+                                id="saida" 
+                                name="saida"
+                                required
+                            >
+                        </div>
+            
+                        <!-- Campo: Número de Hóspedes -->
+                        <div class="search-field">
+                            <label for="hospedes">Quem</label>
+                            <select id="hospedes" name="hospedes" required>
+                                <option value="">Adicionar hóspedes</option>
+                                <option value="1">1 hóspede</option>
+                                <option value="2">2 hóspedes</option>
+                                <option value="3">3 hóspedes</option>
+                                <option value="4">4 hóspedes</option>
+                                <option value="5">5+ hóspedes</option>
+                            </select>
+                        </div>
+            
+                        <!-- Botão de Busca -->
+                        <button type="submit" class="search-btn">
+                            Search
+                        </button>
+                    </form>
+                </div>
+            </section>
+        </header>
+        <main>
+            <h1>Mercado Livre</h1>
+        </main>
+        <footer>
+            <h1>Mercado Livre</h1>
+        </footer>
+
+    </body>
 </html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <title>Mercado Livre Cadastro</title>
+        <link rel="stylesheet" href="cadastro.css">
+
+    </head>
+
+    <body>
+        
+
+        <header>
+            <img src="imgs/mercado-livre-logo-1-2.png" alt="logo">
+        </header>
+
+        <main>
+            <h2>Crie sua conta e compre com<br>frete grátis</h2>
+
+            <form class="cadastro" method="post">
+                <h3>Nome</h3>
+                <input type="text" name="nome" required>
+                <h3>E-mail</h3>
+                <input type="email" name="e-mail" placeholder="exemplo@gmail.com" required>
+                <h3>Senha</h3>
+                <input type="password" name="senha" required>
+                <h3>Telefone</h3>
+                <input type="tel" name="telefone" placeholder="+55" required>
+                <h3>Endereço</h3>
+                <input type="text" name="endereço" required>
+                <h3>Cidade</h3>
+                <input type="text" name="cidade" required>
+                <br><br>
+                <label for="uf">Selecione a UF:</label>
+                <br><br>
+                <select name="uf" id="uf" required>
+                    <option value="">- Selecione o Estado -</option>
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="DF">Distrito Federal</option>
+                    <option value="ES">Espírito Santo</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PA">Pará</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PR">Paraná</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="TO">Tocantins</option>
+                </select>
+
+
+                <br><br>
+                <input type="submit" class="submit" value="Continuar">
+
+
+
+            </form>
+
+        </main>
+    </body>
+
+</html>
