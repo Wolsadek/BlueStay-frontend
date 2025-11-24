@@ -14,17 +14,19 @@ O objetivo é desenvolver o front-end completo de uma aplicação de reservas, s
 
 ### ⚠️ O Grande Desafio Técnico
 Para fins acadêmicos e de aprendizado profundo das bases do CSS, este projeto foi construído com uma restrição severa:
+
 * 🚫 **Proibido o uso de `display: flex`**
 * 🚫 **Proibido o uso de `display: grid`**
 
 Todo o layout responsivo e posicionamento foi construído utilizando técnicas clássicas como **Float**, **Position** e **Box Model**.
 
 ## 🎨 Identidade Visual
+
 * **Nome:** BlueStay
 * **Cores Principais:** Royal Blue (`#2196F3`) e Chambray (`#3F5388`).
 * **Conceito:** Minimalismo, confiança e clareza (Inspirado no Airbnb).
 
-## u2611 ️ Funcionalidades & Páginas (Escopo)
+## ☑️ Funcionalidades & Páginas (Escopo)
 
 O projeto conta com **8 páginas** e seções complexas:
 
@@ -41,7 +43,7 @@ O projeto conta com **8 páginas** e seções complexas:
 
 1. Clone este repositório:
 ```bash
-git clone [https://github.com/Wolsadek/bluestay-web.git](https://github.com/Wolsadek/bluestay-web.git)
+git clone https://github.com/Wolsadek/BlueStay-frontend.git
 ````
 
 2.  Entre na pasta:
@@ -57,9 +59,9 @@ cd bluestay-web
 ## 🤝 Equipe
 
   * **Lorenzo** - [GitHub](https://github.com/Wolsadek)
-  * **Filipe** - [GitHub](https://github.com/1xPimentelx1)
-  * **Miguel** - [GitHub](https://github.com/Mdornelles)
-  * **Guilherme** - [GitHub](https://github.com/Calixtoz1k)
+  * **Filipe** - [GitHub](https://www.google.com/search?q=URL_DO_GITHUB)
+  * **Miguel** - [GitHub](https://www.google.com/search?q=URL_DO_GITHUB)
+  * **Guilherme** - [GitHub](https://www.google.com/search?q=URL_DO_GITHUB)
 
 -----
 
@@ -67,23 +69,10 @@ Desenvolvido com 💙 para a disciplina de Desenvolvimento Web.
 
 ```
 
-### 3. Como renomear e aplicar isso
+### O que eu arrumei:
+1.  **Pulos de linha:** Dei "Enter" entre todos os títulos e parágrafos. Isso faz o texto respirar e o negrito funcionar.
+2.  **Lista de itens:** Coloquei espaço antes dos asteriscos `*` e hifens `-`, agora a lista de "Funcionalidades" vai aparecer com bolinhas ou caixinhas certas.
+3.  **Bloco de código:** Arrumei a parte do `git clone` que estava quebrada.
 
-1.  **Renomear o Repositório:**
-    * No GitHub, vá na aba **Settings**.
-    * Logo no topo, tem o campo "Repository name".
-    * Mude para `bluestay-web` e clique em **Rename**.
-    * *Importante:* Avise seus amigos que o link do `git clone` mudou (agora tem bluestay-web no final), mas o Git é esperto e costuma redirecionar, mas o ideal é eles atualizarem o `remote` se der erro.
-
-2.  **Mudar para Público:**
-    * Ainda em **Settings**, role até o final (Danger Zone).
-    * Clique em **Change visibility** -> **Change to public**.
-
-3.  **Atualizar o README:**
-    * No seu VS Code, apague o que tiver no `README.md`.
-    * Cole esse código que te mandei.
-    * Preencha os nomes dos seus amigos ali na seção "Equipe".
-    * `git add .` -> `git commit -m "Docs: Novo README profissional"` -> `git push`.
-
-Ficou com cara de projeto sério agora, hein?
+Agora é só salvar, dar o `git add .`, `commit` e `push` que vai ficar bonitão lá no site!
 ```
