@@ -67,4 +67,4 @@ cd BlueStay-frontend
 
 -----
 
-Desenvolvido com 💙 para a disciplina de Desenvolvimento Web.
+Desenvolvido com 💙 para a disciplina de Desenvolvimento de Interfaces para Web.
