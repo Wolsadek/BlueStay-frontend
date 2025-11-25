@@ -48,7 +48,7 @@ img {
 }
 
 .logo img {
-    max-height: 70px;
+    max-height: 120px;
     width: auto;
 }
 
@@ -222,6 +222,8 @@ img {
 
 /* Botão de Busca */
 .search-btn {
+    margin-top: 15px;
+    margin-right: 10px;
     display: table-cell;
     vertical-align: middle;
     width: 130px;
@@ -232,7 +234,6 @@ img {
     border-radius: 50px;
     font-size: 16px;
     font-weight: 600;
-    cursor: pointer;
     transition: background-color 0.3s ease;
     text-align: center;
     font-family: 'Figtree', sans-serif;
