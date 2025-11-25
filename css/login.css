@@ -1,5 +1,5 @@
 header{
-    background-color: #ffe600;
+    background-color: #0077B6;
     height: 3.5rem;
     box-sizing: border-box;
     border: 0;
@@ -12,7 +12,6 @@ img{
     height: 34px;
     width: 134px;
     display: flex;
-    overflow: hidden;
     position: static;
     margin-top: 10px;
     margin-left: 200px;
