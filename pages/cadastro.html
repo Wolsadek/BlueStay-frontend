@@ -4,8 +4,8 @@
 
     <head>
         <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-        <title>Cadastro Site</title>
-        <link rel="stylesheet" href="cadastro.css">
+        <title>Mercado Livre Cadastro</title>
+        <link rel="stylesheet" href="../css/cadastro.css">
 
     </head>
 
@@ -13,13 +13,13 @@
         
 
         <header>
-            <!--Mudar Para Nosso logo-->
-            <img src="imgs/mercado-livre-logo-1-2.png" alt="logo">
+            <a href="../index.html" class="voltar">Voltar</a>
+
+            <img>
         </header>
-            <!--Mudar Para Nosso logo-->
 
         <main>
-            <h2>Crie sua conta e compre com<br>frete grátis</h2>
+            <h2>Crie sua conta e alugue com confiança</h2>
 
             <form class="cadastro" method="post">
                 <h3>Nome</h3>
@@ -37,88 +37,45 @@
                 <br><br>
                 <label for="uf">Selecione a UF:</label>
                 <br><br>
+                <select name="uf" id="uf" required>
+                    <option value="">- Selecione o Estado -</option>
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="DF">Distrito Federal</option>
+                    <option value="ES">Espírito Santo</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PA">Pará</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PR">Paraná</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="TO">Tocantins</option>
+                </select>
 
 
-<!--Aqui as Cidades, mas de um jeitinho mais organizado, podemos colocar mais cidades e arrumar depois-->
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        padding: 20px;
-    }
-
-    select {
-        width: 250px;
-        padding: 8px;
-        margin-bottom: 15px;
-    }
-
-    label {
-        font-weight: bold;
-    }
-
-    button {
-        padding: 10px 20px;
-        cursor: pointer;
-    }
-    /*Na parte de cima tem o Css da para colocar no css q esta configurado, mas tava testando e deu preguiça */
-</style>
-</head>
-<body>
-
-<!--Aqui são alguns exemplos, de cidades, da pra colocar mais...-->
-<label>Estado:</label><br>
-<select id="estado">
-    <option value="">-- Selecione o Estado --</option>
-    <option value="SP">São Paulo</option>
-    <option value="RJ">Rio de Janeiro</option>
-    <option value="MG">Minas Gerais</option>
-    <option value="BA">Bahia</option>
-    <option value="RS">Rio Grande Do Sul</option>
-</select>
-
-<br>
-
-<label>Cidade:</label><br>
-<select id="cidade">
-    <option value="">-- Selecione o Estado Primeiro --</option>
-</select>
-
-<!-- Coloquei alguns exemplos de cidades, aqui é qunado já esta selecionado-->
-<script>
-const cidadesPorEstado = {
-    SP: ["São Paulo", "Campinas", "Santos", "Sorocaba", "Ribeirão Preto"],
-    RJ: ["Rio de Janeiro", "Niterói", "Petrópolis", "Volta Redonda"],
-    MG: ["Belo Horizonte", "Uberlândia", "Contagem", "Juiz de Fora"],
-    BA: ["Salvador", "Feira de Santana", "Ilhéus", "Porto Seguro"],
-    RS: ["Porto Alegre", "Gravataí", "Canoas", "Ijuí"]
-};
-
-document.getElementById("estado").addEventListener("change", function () {
-    const estadoSelecionado = this.value;
-    const cidadeSelect = document.getElementById("cidade");
-
-    cidadeSelect.innerHTML = ""; // limpa cidades
-
-    if (estadoSelecionado === "") {
-        cidadeSelect.innerHTML = "<option>-- Selecione o Estado Primeiro --</option>";
-        return;
-    }
-
-    const cidades = cidadesPorEstado[estadoSelecionado];
-
-    cidades.forEach(cidade => {
-        const option = document.createElement("option");
-        option.value = cidade;
-        option.textContent = cidade;
-        cidadeSelect.appendChild(option);
-    });
-});
-</script>
-</body>
-</html>
                 <br><br>
                 <input type="submit" class="submit" value="Continuar">
+
+
+
             </form>
+
         </main>
     </body>
 

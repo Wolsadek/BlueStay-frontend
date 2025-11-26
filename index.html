@@ -5,79 +5,450 @@
     Versão: 2.0
 -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title>BlueStay - Encontre seu lar temporário</title>
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-        <header>
-            <section class="search-section">
-                <div class="search-container">
-                    <form class="search-form" action="#" method="get">
-                        
-                        <!-- Campo: Buscar Destino -->
-                        <div class="search-field">
-                            <label for="destino">Onde</label>
-                            <input 
-                                type="text" 
-                                id="destino" 
-                                name="destino" 
-                                placeholder="Buscar destinos"
-                                required
-                            >
-                        </div>
-            
-                        <!-- Campo: Data de Entrada -->
-                        <div class="search-field">
-                            <label for="entrada">Data de entrada</label>
-                            <input 
-                                type="date" 
-                                id="entrada" 
-                                name="entrada"
-                                required
-                            >
-                        </div>
-            
-                        <!-- Campo: Data de Saída -->
-                        <div class="search-field">
-                            <label for="saida">Data de saída</label>
-                            <input 
-                                type="date" 
-                                id="saida" 
-                                name="saida"
-                                required
-                            >
-                        </div>
-            
-                        <!-- Campo: Número de Hóspedes -->
-                        <div class="search-field">
-                            <label for="hospedes">Quem</label>
-                            <select id="hospedes" name="hospedes" required>
-                                <option value="">Adicionar hóspedes</option>
-                                <option value="1">1 hóspede</option>
-                                <option value="2">2 hóspedes</option>
-                                <option value="3">3 hóspedes</option>
-                                <option value="4">4 hóspedes</option>
-                                <option value="5">5+ hóspedes</option>
-                            </select>
-                        </div>
-            
-                        <!-- Botão de Busca -->
-                        <button type="submit" class="search-btn">
-                            Search
-                        </button>
-                    </form>
+        <header class="main-header">
+            <div class="header-container">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="img/logo.png" alt="BlueStay Logo">
+                    </a>
+                </div>
+
+                <nav class="nav-menu">
+                    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+                    <label for="menu-toggle" class="menu-icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </label>
+                    
+                    <label for="menu-toggle" class="menu-overlay"></label>
+                    
+                    <ul class="menu-list">
+                        <li><a href="pages/login.html">Entrar</a></li>
+                        <li><a href="pages/cadastro.html">Cadastrar-se</a></li>
+                        <li><a href="#ajuda">Central de Ajuda</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <!-- BARRA DE BUSCA -->
+        <section class="search-section">
+            <div class="search-container">
+                <form class="search-form" action="#" method="get">
+                    
+                    <div class="search-field">
+                        <label for="destino">Onde</label>
+                        <input 
+                            type="text" 
+                            id="destino" 
+                            name="destino" 
+                            placeholder="Buscar destinos"
+                            required
+                        >
+                    </div>
+        
+                    <div class="search-field">
+                        <label for="entrada">Data de entrada</label>
+                        <input 
+                            type="date" 
+                            id="entrada" 
+                            name="entrada"
+                            required
+                        >
+                    </div>
+        
+                    <div class="search-field">
+                        <label for="saida">Data de saída</label>
+                        <input 
+                            type="date" 
+                            id="saida" 
+                            name="saida"
+                            required
+                        >
+                    </div>
+        
+                    <div class="search-field">
+                        <label for="hospedes">Quem</label>
+                        <select id="hospedes" name="hospedes" required>
+                            <option value="">Adicionar hóspedes</option>
+                            <option value="1">1 hóspede</option>
+                            <option value="2">2 hóspedes</option>
+                            <option value="3">3 hóspedes</option>
+                            <option value="4">4 hóspedes</option>
+                            <option value="5">5+ hóspedes</option>
+                        </select>
+                    </div>
+        
+                    <button type="submit" class="search-btn">
+                        Buscar
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <!-- CONTEÚDO PRINCIPAL -->
+        <main>
+            <!-- CATEGORIA 1: Apartamentos em Destaque -->
+            <section class="category-section">
+                <h2 class="category-title">Apartamentos em Destaque</h2>
+                <div class="carousel-wrapper">
+                    <div class="carousel-container">
+                        <!-- Card 1 -->
+                        <a href="pages/apartamento.html" class="card">
+                            <div class="card-image">
+                                <img src="https://via.placeholder.com/183x173/0077B6/ffffff?text=Apartamento" alt="Apartamento">
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">Apartamento em Madureira - RJ</h3>
+                                <p class="card-description">Apartamento completo e mobiliado</p>
+                                <p class="card-price">R$ 879,90/mês</p>
+                            </div>
+                        </a>
+
+                        <!-- Card 2 -->
+                        <article class="card">
+                            <div class="card-image">
+                                <img src="https://via.placeholder.com/183x173/0077B6/ffffff?text=Apartamento" alt="Apartamento">
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">Apartamento em Copacabana - RJ</h3>
+                                <p class="card-description">Vista para o mar, mobiliado</p>
+                                <p class="card-price">R$ 1.450,00/mês</p>
+                            </div>
+                        </article>
+
+                        <!-- Card 3 -->
+                        <article class="card">
+                            <div class="card-image">
+                                <img src="https://via.placeholder.com/183x173/0077B6/ffffff?text=Apartamento" alt="Apartamento">
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">Apartamento em Tijuca - RJ</h3>
+                                <p class="card-description">Próximo ao metrô, 2 quartos</p>
+                                <p class="card-price">R$ 1.120,00/mês</p>
+                            </div>
+                        </article>
+
+                        <!-- Card 4 -->
+                        <article class="card">
+                            <div class="card-image">
+                                <img src="https://via.placeholder.com/183x173/0077B6/ffffff?text=Apartamento" alt="Apartamento">
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">Apartamento em Botafogo - RJ</h3>
+                                <p class="card-description">Moderno e aconchegante</p>
+                                <p class="card-price">R$ 1.300,00/mês</p>
+                            </div>
+                        </article>
+
+                        <!-- Card 5 -->
+                        <article class="card">
+                            <div class="card-image">
+                                <img src="https://via.placeholder.com/183x173/0077B6/ffffff?text=Apartamento" alt="Apartamento">
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">Apartamento em Ipanema - RJ</h3>
+                                <p class="card-description">Luxuoso, perto da praia</p>
+                                <p class="card-price">R$ 2.100,00/mês</p>
+                            </div>
+                        </article>
+                    </div>
                 </div>
             </section>
-        </header>
-        <main>
-            <h1>Mercado Livre</h1>
+
+            <!-- CATEGORIA 2: Novos Lançamentos -->
+            <section class="category-section">
+                <h2 class="category-title">Novos Lançamentos</h2>
+                <div class="carousel-wrapper">
+                    <div class="carousel-container">
+                        <!-- Card 1 -->
+                        <article class="card">
+                            <div class="card-image">
+                                <img src="https://via.placeholder.com/183x173/005a8c/ffffff?text=Novo" alt="Apartamento">
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">Apartamento em Barra - RJ</h3>
+                                <p class="card-description">Empreendimento novo, 3 quartos</p>
+                                <p class="card-price">R$ 1.850,00/mês</p>
+                            </div>
+                        </article>
+
+                        <!-- Card 2 -->
+                        <article class="card">
+                            <div class="card-image">
+                                <img src="https://via.placeholder.com/183x173/005a8c/ffffff?text=Novo" alt="Apartamento">
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">Apartamento em Recreio - RJ</h3>
+                                <p class="card-description">Condomínio com lazer completo</p>
+                                <p class="card-price">R$ 1.600,00/mês</p>
+                            </div>
+                        </article>
+
+                        <!-- Card 3 -->
+                        <article class="card">
+                            <div class="card-image">
+                                <img src="https://via.placeholder.com/183x173/005a8c/ffffff?text=Novo" alt="Apartamento">
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">Apartamento em Jacarepaguá - RJ</h3>
+                                <p class="card-description">Acabamento de primeira</p>
+                                <p class="card-price">R$ 1.250,00/mês</p>
+                            </div>
+                        </article>
+
+                        <!-- Card 4 -->
+                        <article class="card">
+                            <div class="card-image">
+                                <img src="https://via.placeholder.com/183x173/005a8c/ffffff?text=Novo" alt="Apartamento">
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">Apartamento em Leblon - RJ</h3>
+                                <p class="card-description">Localização privilegiada</p>
+                                <p class="card-price">R$ 2.500,00/mês</p>
+                            </div>
+                        </article>
+
+                        <!-- Card 5 -->
+                        <article class="card">
+                            <div class="card-image">
+                                <img src="https://via.placeholder.com/183x173/005a8c/ffffff?text=Novo" alt="Apartamento">
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">Apartamento em Campo Grande - RJ</h3>
+                                <p class="card-description">Amplo e ventilado</p>
+                                <p class="card-price">R$ 950,00/mês</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CATEGORIA 3: Mais Econômicos -->
+            <section class="category-section">
+                <h2 class="category-title">Mais Econômicos</h2>
+                <div class="carousel-wrapper">
+                    <div class="carousel-container">
+                        <!-- Card 1 -->
+                        <article class="card">
+                            <div class="card-image">
+                                <img src="https://via.placeholder.com/183x173/FCA311/ffffff?text=Economico" alt="Apartamento">
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">Apartamento em Realengo - RJ</h3>
+                                <p class="card-description">Confortável e acessível</p>
+                                <p class="card-price">R$ 650,00/mês</p>
+                            </div>
+                        </article>
+
+                        <!-- Card 2 -->
+                        <article class="card">
+                            <div class="card-image">
+                                <img src="https://via.placeholder.com/183x173/FCA311/ffffff?text=Economico" alt="Apartamento">
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">Apartamento em Bangu - RJ</h3>
+                                <p class="card-description">Ótimo custo-benefício</p>
+                                <p class="card-price">R$ 720,00/mês</p>
+                            </div>
+                        </article>
+
+                        <!-- Card 3 -->
+                        <article class="card">
+                            <div class="card-image">
+                                <img src="https://via.placeholder.com/183x173/FCA311/ffffff?text=Economico" alt="Apartamento">
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">Apartamento em Pavuna - RJ</h3>
+                                <p class="card-description">Simples e bem localizado</p>
+                                <p class="card-price">R$ 580,00/mês</p>
+                            </div>
+                        </article>
+
+                        <!-- Card 4 -->
+                        <article class="card">
+                            <div class="card-image">
+                                <img src="https://via.placeholder.com/183x173/FCA311/ffffff?text=Economico" alt="Apartamento">
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">Apartamento em Anchieta - RJ</h3>
+                                <p class="card-description">Funcional para estudantes</p>
+                                <p class="card-price">R$ 690,00/mês</p>
+                            </div>
+                        </article>
+
+                        <!-- Card 5 -->
+                        <article class="card">
+                            <div class="card-image">
+                                <img src="https://via.placeholder.com/183x173/FCA311/ffffff?text=Economico" alt="Apartamento">
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">Apartamento em Nilópolis - RJ</h3>
+                                <p class="card-description">Próximo ao comércio</p>
+                                <p class="card-price">R$ 750,00/mês</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CATEGORIA 4: Para Famílias -->
+            <section class="category-section">
+                <h2 class="category-title">Para Famílias</h2>
+                <div class="carousel-wrapper">
+                    <div class="carousel-container">
+                        <!-- Card 1 -->
+                        <article class="card">
+                            <div class="card-image">
+                                <img src="https://via.placeholder.com/183x173/0096C7/ffffff?text=Familia" alt="Apartamento">
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">Apartamento em Méier - RJ</h3>
+                                <p class="card-description">3 quartos, área de lazer</p>
+                                <p class="card-price">R$ 1.380,00/mês</p>
+                            </div>
+                        </article>
+
+                        <!-- Card 2 -->
+                        <article class="card">
+                            <div class="card-image">
+                                <img src="https://via.placeholder.com/183x173/0096C7/ffffff?text=Familia" alt="Apartamento">
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">Apartamento em Vila Isabel - RJ</h3>
+                                <p class="card-description">Amplo, próximo a escolas</p>
+                                <p class="card-price">R$ 1.550,00/mês</p>
+                            </div>
+                        </article>
+
+                        <!-- Card 3 -->
+                        <article class="card">
+                            <div class="card-image">
+                                <img src="https://via.placeholder.com/183x173/0096C7/ffffff?text=Familia" alt="Apartamento">
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">Apartamento em Engenho Novo - RJ</h3>
+                                <p class="card-description">Condomínio familiar</p>
+                                <p class="card-price">R$ 1.200,00/mês</p>
+                            </div>
+                        </article>
+
+                        <!-- Card 4 -->
+                        <article class="card">
+                            <div class="card-image">
+                                <img src="https://via.placeholder.com/183x173/0096C7/ffffff?text=Familia" alt="Apartamento">
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">Apartamento em Grajaú - RJ</h3>
+                                <p class="card-description">4 quartos, varanda</p>
+                                <p class="card-price">R$ 1.680,00/mês</p>
+                            </div>
+                        </article>
+
+                        <!-- Card 5 -->
+                        <article class="card">
+                            <div class="card-image">
+                                <img src="https://via.placeholder.com/183x173/0096C7/ffffff?text=Familia" alt="Apartamento">
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">Apartamento em Taquara - RJ</h3>
+                                <p class="card-description">Seguro e tranquilo</p>
+                                <p class="card-price">R$ 1.420,00/mês</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CATEGORIA 5: Próximos ao Centro -->
+            <section class="category-section">
+                <h2 class="category-title">Próximos ao Centro</h2>
+                <div class="carousel-wrapper">
+                    <div class="carousel-container">
+                        <!-- Card 1 -->
+                        <article class="card">
+                            <div class="card-image">
+                                <img src="https://via.placeholder.com/183x173/023E8A/ffffff?text=Centro" alt="Apartamento">
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">Apartamento em Centro - RJ</h3>
+                                <p class="card-description">No coração da cidade</p>
+                                <p class="card-price">R$ 1.100,00/mês</p>
+                            </div>
+                        </article>
+
+                        <!-- Card 2 -->
+                        <article class="card">
+                            <div class="card-image">
+                                <img src="https://via.placeholder.com/183x173/023E8A/ffffff?text=Centro" alt="Apartamento">
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">Apartamento em Lapa - RJ</h3>
+                                <p class="card-description">Histórico e charmoso</p>
+                                <p class="card-price">R$ 980,00/mês</p>
+                            </div>
+                        </article>
+
+                        <!-- Card 3 -->
+                        <article class="card">
+                            <div class="card-image">
+                                <img src="https://via.placeholder.com/183x173/023E8A/ffffff?text=Centro" alt="Apartamento">
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">Apartamento em Glória - RJ</h3>
+                                <p class="card-description">Acesso fácil a tudo</p>
+                                <p class="card-price">R$ 1.050,00/mês</p>
+                            </div>
+                        </article>
+
+                        <!-- Card 4 -->
+                        <article class="card">
+                            <div class="card-image">
+                                <img src="https://via.placeholder.com/183x173/023E8A/ffffff?text=Centro" alt="Apartamento">
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">Apartamento em Catete - RJ</h3>
+                                <p class="card-description">Tradicional e movimentado</p>
+                                <p class="card-price">R$ 1.150,00/mês</p>
+                            </div>
+                        </article>
+
+                        <!-- Card 5 -->
+                        <article class="card">
+                            <div class="card-image">
+                                <img src="https://via.placeholder.com/183x173/023E8A/ffffff?text=Centro" alt="Apartamento">
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">Apartamento em Flamengo - RJ</h3>
+                                <p class="card-description">Vista para o Pão de Açúcar</p>
+                                <p class="card-price">R$ 1.480,00/mês</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
         </main>
-        <footer>
-            <h1>Mercado Livre</h1>
+
+        <!-- RODAPÉ -->
+        <footer class="main-footer">
+            <div class="footer-container">
+                <p>&copy; 2025 BlueStay - Todos os direitos reservados</p>
+            </div>
         </footer>
 
     </body>

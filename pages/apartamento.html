@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apartamento - BlueStay</title>
+    <link rel="stylesheet" href="../css/apartamento.css">
+</head>
+<body>
+    
+    <header>
+        <a href="../index.html" class="voltar">Voltar</a>
+        <img src="../img/logo.png" alt="BlueStay Logo">
+    </header>
+
+    <main>
+        <!-- Galeria de Fotos -->
+        <section class="galeria">
+            <div class="foto-principal">
+                <img src="" alt="Foto principal">
+            </div>
+            <div class="fotos-pequenas">
+                <img src="" alt="Foto 2">
+                <img src="" alt="Foto 3">
+                <img src="" alt="Foto 4">
+                <img src="" alt="Foto 5">
+            </div>
+        </section>
+
+        <!-- Informações do Apartamento -->
+        <section class="info">
+            <div class="info-esquerda">
+                <h1>Apartamento em Madureira - RJ</h1>
+                <p class="localizacao">Madureira, Rio de Janeiro - RJ</p>
+                
+                <div class="caracteristicas">
+                    <div class="item">
+                        <h3>2</h3>
+                        <p>Quartos</p>
+                    </div>
+                    <div class="item">
+                        <h3>1</h3>
+                        <p>Banheiro</p>
+                    </div>
+                    <div class="item">
+                        <h3>65m²</h3>
+                        <p>Área</p>
+                    </div>
+                    <div class="item">
+                        <h3>4</h3>
+                        <p>Hóspedes</p>
+                    </div>
+                </div>
+
+                <div class="descricao">
+                    <h2>Sobre este espaço</h2>
+                    <p>Apartamento completo e mobiliado, ideal para quem busca conforto e praticidade. Localizado em Madureira, próximo ao comércio local, metrô e principais vias de acesso.</p>
+                    <br>
+                    <p>O apartamento conta com 2 quartos amplos, sala de estar, cozinha equipada, banheiro completo e área de serviço. Perfeito para famílias ou grupo de amigos.</p>
+                </div>
+
+                <div class="comodidades">
+                    <h2>O que este lugar oferece</h2>
+                    <ul>
+                        <li>Wi-Fi</li>
+                        <li>TV a cabo</li>
+                        <li>Cozinha equipada</li>
+                        <li>Máquina de lavar</li>
+                        <li>Ar condicionado</li>
+                        <li>Portaria 24h</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Card de Reserva -->
+            <div class="info-direita">
+                <div class="card-reserva">
+                    <div class="preco">
+                        <h2>R$ 879,90</h2>
+                        <p>/mês</p>
+                    </div>
+                    
+                    <form class="formulario" method="post">
+                        <div class="campo">
+                            <label for="entrada">Entrada</label>
+                            <input type="date" id="entrada" name="entrada" required>
+                        </div>
+                        
+                        <div class="campo">
+                            <label for="saida">Saída</label>
+                            <input type="date" id="saida" name="saida" required>
+                        </div>
+                        
+                        <div class="campo">
+                            <label for="hospedes">Hóspedes</label>
+                            <select id="hospedes" name="hospedes" required>
+                                <option value="">Selecione</option>
+                                <option value="1">1 hóspede</option>
+                                <option value="2">2 hóspedes</option>
+                                <option value="3">3 hóspedes</option>
+                                <option value="4">4 hóspedes</option>
+                            </select>
+                        </div>
+                        
+                        <input type="submit" class="botao-reservar" value="Reservar">
+                    </form>
+                    
+                    <p class="aviso">Você não será cobrado ainda</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 BlueStay - Todos os direitos reservados</p>
+    </footer>
+
+</body>
+</html>
+
