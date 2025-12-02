@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamento - BlueStay</title>
+    <link rel="stylesheet" href="../css/pagamento.css">
+</head>
+<body>
+    
+    <header>
+        <div class="logo">
+            <a href="../index.html">
+                <img src="../img/logoSfundo.png" alt="BlueStay Logo">
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            
+            <!-- Lado Esquerdo -->
+            <div class="lado-esquerdo">
+                
+                <!-- Voltar -->
+                <div class="voltar-link">
+                    <a href="../pages/apartamento.html">← Voltar</a>
+                </div>
+
+                <h1>Solicitar Reserva</h1>
+
+                <!-- Sua Viagem -->
+                <section class="secao">
+                    <h2>Sua viagem</h2>
+                    
+                    <div class="info-linha">
+                        <div class="info-label">
+                            <h3>Datas</h3>
+                            <p>2 - 7 de dez.</p>
+                        </div>
+                        <a href="#" class="editar">Editar</a>
+                    </div>
+
+                    <div class="info-linha">
+                        <div class="info-label">
+                            <h3>Hóspedes</h3>
+                            <p>1 hóspede</p>
+                        </div>
+                        <a href="#" class="editar">Editar</a>
+                    </div>
+                </section>
+
+                <!-- Informações de Pagamento -->
+                <section class="secao">
+                    <h2>Pagar com</h2>
+                    
+                    <div class="metodos-pagamento">
+                        <label class="metodo-radio">
+                            <input type="radio" name="metodo" value="cartao" checked>
+                            <span>Cartão de crédito ou débito</span>
+                        </label>
+                        
+                        <label class="metodo-radio">
+                            <input type="radio" name="metodo" value="pix">
+                            <span>PIX</span>
+                        </label>
+                        
+                        <label class="metodo-radio">
+                            <input type="radio" name="metodo" value="boleto">
+                            <span>Boleto bancário</span>
+                        </label>
+                    </div>
+
+                    <form class="form-pagamento">
+                        <div class="form-group">
+                            <label for="numero-cartao">Número do cartão</label>
+                            <input type="text" id="numero-cartao" placeholder="0000 0000 0000 0000" required>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="validade">Validade</label>
+                                <input type="text" id="validade" placeholder="MM/AA" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="cvv">CVV</label>
+                                <input type="text" id="cvv" placeholder="123" maxlength="3" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="nome-cartao">Nome no cartão</label>
+                            <input type="text" id="nome-cartao" placeholder="Nome como está no cartão" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="cpf">CPF</label>
+                            <input type="text" id="cpf" placeholder="000.000.000-00" required>
+                        </div>
+                    </form>
+                </section>
+
+                <!-- Política de Cancelamento -->
+                <section class="secao">
+                    <h2>Política de cancelamento</h2>
+                    <p>Cancelamento gratuito até 48 horas antes do check-in. Cancele antes de 2 de dez. para receber reembolso total.</p>
+                </section>
+
+                <!-- Botão Confirmar -->
+                <button class="btn-confirmar">Confirmar e pagar</button>
+
+            </div>
+
+            <!-- Lado Direito -->
+            <div class="lado-direito">
+                <div class="card-resumo">
+                    
+                    <!-- Apartamento -->
+                    <div class="apartamento-info">
+                        <img src="../img/apartamentos/1.jpg" alt="Apartamento">
+                        <div class="apt-detalhes">
+                            <h3>Apartamento em Madureira - RJ</h3>
+                            <p>Espaço inteiro: apartamento</p>
+                            <p class="avaliacao">★ 4.97 (119 comentários) · Superhost</p>
+                        </div>
+                    </div>
+
+                    <!-- Detalhes de Preço -->
+                    <div class="detalhes-preco">
+                        <h3>Informações de preço</h3>
+                        
+                        <div class="linha-preco">
+                            <span>R$ 879,90 x 5 noites</span>
+                            <span>R$ 4.399,50</span>
+                        </div>
+
+                        <div class="linha-preco">
+                            <span>Taxa de limpeza</span>
+                            <span>R$ 150,00</span>
+                        </div>
+
+                        <div class="linha-preco">
+                            <span>Taxa de serviço BlueStay</span>
+                            <span>R$ 227,50</span>
+                        </div>
+                    </div>
+
+                    <!-- Total -->
+                    <div class="total">
+                        <strong>Total (BRL)</strong>
+                        <strong>R$ 4.777,00</strong>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+</html>
+
