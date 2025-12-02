@@ -1,54 +1,66 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="pt-BR">
     <head>
-        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-        <title>Mercado Livre</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login - BlueStay</title>
         <link rel="stylesheet" href="../css/login.css">
     </head>
 
-
     <body>
         <header>
-            <a href="../index.html" class="voltar">Voltar</a>
-            <img>
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../img/logoSfundo.png" alt="BlueStay Logo">
+                </a>
+            </div>
+
+            <nav class="nav-menu">
+                <input type="checkbox" id="menu-toggle" class="menu-toggle">
+                <label for="menu-toggle" class="menu-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+                
+                <label for="menu-toggle" class="menu-overlay"></label>
+                
+                <ul class="menu-list">
+                    <li><a href="login.html">Entrar</a></li>
+                    <li><a href="cadastro.html">Cadastrar-se</a></li>
+                    <li><a href="suporte.html">Central de Ajuda</a></li>
+                </ul>
+            </nav>
         </header>
 
         <main>
             <div class="container">
                 <div class="texto-esquerda">
-                    <h1>Digite seu e-mail ou telefone<br> para iniciar sessão</h1>
+                    <h1>Bem-vindo de volta!</h1>
+                    <p>Faça login para continuar sua busca pelo lar temporário perfeito</p>
                 </div>
-                <form class="cadastro" method="post">
-                    <h3>E-mail ou telefone</h3>
-                    <input type="text" name="nome" required>
-                    <h3>Senha</h3>
-                    <input type="password" name="senha" required>
-                    <br><br>
-                    <input type="submit" class="submit" value="Continuar">
-
-                    <br><br>
-                    <a href="cadastro.html">Criar conta</a>
-
+                <form class="form-login" method="post">
+                    <h2>Entrar na sua conta</h2>
+                    
+                    <label for="email">E-mail ou telefone</label>
+                    <input type="text" id="email" name="email" required>
+                    
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" name="senha" required>
+                    
+                    <input type="submit" class="submit" value="Entrar">
+                    
+                    <div class="link-criar-conta">
+                        <p>Não tem uma conta? <a href="cadastro.html">Criar conta</a></p>
+                    </div>
                 </form>
-
-
             </div>
-
-
         </main>
 
-        <!--
-       <footer>
-            <div>
-                <h5>Como cuidamos da sua privacidade - Copyright © 1999-2025 Ebazar.com.br LTDA.</h5>
-                <h5>Protegido por reCAPTCHA - Privacidade - Condições</h5>
+        <footer>
+            <div class="footer-container">
+                <p>&copy; 2025 BlueStay - Todos os direitos reservados</p>
             </div>
         </footer>
-        -->
     </body>
-
-
-
 </html>
