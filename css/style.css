@@ -121,9 +121,7 @@ img {
     display: block;
 }
 
-.menu-list li {
-    border-bottom: 1px solid #f0f0f0;
-}
+
 
 .menu-list li:last-child {
     border-bottom: none;
