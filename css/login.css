@@ -1,81 +1,309 @@
-header{
-    background-color: #0077B6;
-    height: 3.5rem;
-    box-sizing: border-box;
-    border: 0;
+/* Reset Básico */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* ===== HEADER ===== */
+header {
+    background-color: #f6f6f6;
+    padding: 20px 30px;
     position: relative;
-    display: flex;
-    
 }
 
-img{
-    height: 34px;
-    width: 134px;
-    display: flex;
-    position: static;
+header::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.logo {
+    float: left;
+    padding-left: 0;
+}
+
+.logo img {
+    max-height: 100px;
+    width: auto;
+}
+
+.nav-menu {
+    float: right;
+    padding-right: 0;
+    position: relative;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.menu-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    z-index: 999;
+}
+
+.menu-toggle:checked ~ .menu-overlay {
+    display: block;
+}
+
+.menu-icon {
+    display: block;
+    width: 35px;
+    height: 30px;
+    position: relative;
+    cursor: pointer;
     margin-top: 10px;
-    margin-left: 200px;
+    z-index: 1001;
 }
 
+.menu-icon span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #0077B6;
+    margin-bottom: 6px;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
 
-body{
+.menu-icon span:last-child {
+    margin-bottom: 0;
+}
+
+.menu-list {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    min-width: 200px;
+    display: none;
+    z-index: 1000;
+}
+
+.menu-toggle:checked ~ .menu-list {
+    display: block;
+}
+
+.menu-list li {
+    list-style: none;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.menu-list li:last-child {
+    border-bottom: none;
+}
+
+.menu-list a {
+    display: block;
+    padding: 15px 20px;
+    color: #333;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.menu-list a:hover {
+    background-color: #f8f9fa;
+    color: #0077B6;
+}
+
+/* ===== MAIN ===== */
+main {
+    padding: 60px 20px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Texto à Esquerda */
+.texto-esquerda {
+    float: left;
+    width: 45%;
+    padding-right: 40px;
+    padding-top: 50px;
+}
+
+.texto-esquerda h1 {
+    font-size: 42px;
+    color: #333;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.texto-esquerda p {
+    font-size: 18px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Formulário de Login */
+.form-login {
+    float: right;
+    width: 45%;
+    background-color: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.1);
+}
+
+.form-login h2 {
+    font-size: 28px;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.form-login label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+    margin-top: 20px;
+}
+
+.form-login label:first-of-type {
+    margin-top: 0;
+}
+
+.form-login input[type="text"],
+.form-login input[type="password"] {
+    width: 100%;
+    height: 45px;
+    padding: 0 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: border-color 0.3s;
+}
+
+.form-login input[type="text"]:focus,
+.form-login input[type="password"]:focus {
+    outline: none;
+    border-color: #0077B6;
+}
+
+.submit {
+    width: 100%;
+    height: 50px;
+    background-color: #0077B6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 30px;
+    transition: background-color 0.3s;
+}
+
+.submit:hover {
+    background-color: #005a8c;
+}
+
+/* Link Criar Conta - CENTRALIZADO */
+.link-criar-conta {
+    text-align: center;
+    margin-top: 25px;
+    padding-top: 25px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.link-criar-conta p {
+    font-size: 15px;
+    color: #666;
     margin: 0;
 }
 
-.container{
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.texto-esquerda{
-    float: left;
-    padding-top: 4%;
-    margin-left: 20%;
-}
-
-.cadastro{
-    border: 1px solid #e5e5e5;
-    display: block;
-    padding: 2rem;
-    box-sizing: border-box;
-    padding-top: 1rem;
-    width: 32%;
-    border-radius: 10px;
-    float: right;
-    margin-top: 4%;
-    margin-right: 20%;
-}
-
-input{
-    width: 100%;
-    height: 40px;
-    border-radius: 10px;
-    border: 1px solid #e5e5e5;
-    font-weight: 600;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.cadastro h3{
-    font-size: 14px;
-    font-weight: 400;
-}
-
-.submit{
-    background-color: #3483fa;
-    border-radius: 6px;
-    text-align: center;
-    height: 50px;
-    width: 100%;
-    color: white;
-}
-
-a{
+.link-criar-conta a {
+    color: #0077B6;
     text-decoration: none;
-    color: #3483fb;
     font-weight: 600;
-
+    transition: color 0.3s;
 }
 
-footer{
-    position: fixed;
-    background-color: #f5f5f5;
+.link-criar-conta a:hover {
+    color: #005a8c;
+    text-decoration: underline;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 80px;
+}
+
+.footer-container p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* ===== RESPONSIVO ===== */
+@media screen and (max-width: 768px) {
+    .logo img {
+        max-height: 80px;
+    }
+    
+    .texto-esquerda,
+    .form-login {
+        float: none;
+        width: 100%;
+        padding-right: 0;
+        margin-bottom: 30px;
+    }
+    
+    .texto-esquerda {
+        padding-top: 0;
+        text-align: center;
+    }
+    
+    .texto-esquerda h1 {
+        font-size: 32px;
+    }
+    
+    .texto-esquerda p {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .logo img {
+        max-height: 60px;
+    }
+    
+    .texto-esquerda h1 {
+        font-size: 28px;
+    }
+    
+    .form-login {
+        padding: 30px 20px;
+    }
+    
+    .form-login h2 {
+        font-size: 24px;
+    }
 }
