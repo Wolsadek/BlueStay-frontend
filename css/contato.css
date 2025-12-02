@@ -1,0 +1,527 @@
+/* Reset Básico */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ===== HEADER ===== */
+header {
+    background-color: #f6f6f6;
+    padding: 20px 30px;
+    position: relative;
+}
+
+header::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.logo {
+    float: left;
+    padding-left: 0;
+}
+
+.logo img {
+    max-height: 100px;
+    width: auto;
+}
+
+.nav-menu {
+    float: right;
+    padding-right: 0;
+    position: relative;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.menu-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    z-index: 999;
+}
+
+.menu-toggle:checked ~ .menu-overlay {
+    display: block;
+}
+
+.menu-icon {
+    display: block;
+    width: 35px;
+    height: 30px;
+    position: relative;
+    cursor: pointer;
+    margin-top: 10px;
+    z-index: 1001;
+}
+
+.menu-icon span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #0077B6;
+    margin-bottom: 6px;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.menu-icon span:last-child {
+    margin-bottom: 0;
+}
+
+.menu-list {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    min-width: 200px;
+    display: none;
+    z-index: 1000;
+}
+
+.menu-toggle:checked ~ .menu-list {
+    display: block;
+}
+
+.menu-list li {
+    list-style: none;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.menu-list li:last-child {
+    border-bottom: none;
+}
+
+.menu-list a {
+    display: block;
+    padding: 15px 20px;
+    color: #333;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.menu-list a:hover {
+    background-color: #f8f9fa;
+    color: #0077B6;
+}
+
+/* ===== BANNER ===== */
+.banner {
+    background: linear-gradient(135deg, #0077B6 0%, #005a8c 100%);
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.banner-content h1 {
+    font-size: 42px;
+    margin: 0 0 10px 0;
+}
+
+.banner-content p {
+    font-size: 18px;
+    margin: 0;
+    opacity: 0.9;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+
+/* ===== INFORMAÇÕES DE CONTATO ===== */
+.info-contato {
+    margin-bottom: 50px;
+}
+
+.info-contato::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.info-item {
+    width: 18%;
+    float: left;
+    margin-right: 2.5%;
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+}
+
+.info-item:hover {
+    transform: translateY(-5px);
+}
+
+.info-item:last-child {
+    margin-right: 0;
+}
+
+.info-item h3 {
+    font-size: 20px;
+    color: #0077B6;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.info-item p {
+    font-size: 15px;
+    color: #666;
+    margin: 5px 0;
+}
+
+/* ===== FORMULÁRIO ===== */
+.secao-formulario {
+    background-color: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    margin-bottom: 50px;
+}
+
+.secao-formulario h2 {
+    font-size: 32px;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.subtitulo {
+    text-align: center;
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.form-contato {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.form-row {
+    margin-bottom: 20px;
+}
+
+.form-row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.form-col {
+    width: 42%;
+    float: left;
+    margin-right: 6%;
+}
+
+.form-col:nth-child(2) {
+    margin-right: 0;
+}
+
+.form-full {
+    margin-bottom: 20px;
+}
+
+.form-col label,
+.form-full label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.form-col input,
+.form-col select,
+.form-full textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: border-color 0.3s;
+}
+
+.form-col input:focus,
+.form-col select:focus,
+.form-full textarea:focus {
+    outline: none;
+    border-color: #0077B6;
+}
+
+.form-col select {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23333' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    padding-right: 40px;
+}
+
+.form-full textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.btn-enviar {
+    width: 100%;
+    padding: 18px;
+    background-color: #0077B6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.btn-enviar:hover {
+    background-color: #005a8c;
+}
+
+/* ===== FAQ ===== */
+.secao-faq {
+    background-color: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.secao-faq h2 {
+    font-size: 32px;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.faq-lista::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.faq-item {
+    width: 42%;
+    float: left;
+    margin-right: 4%;
+    margin-bottom: 25px;
+    background-color: #f8f9fa;
+    padding: 25px;
+    border-radius: 8px;
+    border-left: 4px solid #0077B6;
+}
+
+.faq-item:nth-child(2n) {
+    margin-right: 0;
+}
+
+.faq-item h3 {
+    font-size: 18px;
+    color: #0077B6;
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+.faq-item p {
+    font-size: 15px;
+    color: #666;
+    margin: 0;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background-color: #f8f9fa;
+    color: #333;
+    padding: 50px 0 20px 0;
+    border-top: 1px solid #e0e0e0;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-secoes {
+    display: block;
+    margin-bottom: 40px;
+}
+
+.footer-secoes::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.footer-coluna {
+    width: 23%;
+    float: left;
+    margin-right: 2.5%;
+    margin-bottom: 30px;
+}
+
+.footer-coluna:last-child {
+    margin-right: 0;
+}
+
+.footer-coluna h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.footer-coluna ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-coluna li {
+    margin-bottom: 10px;
+}
+
+.footer-coluna a {
+    color: #666;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.footer-coluna a:hover {
+    color: #0077B6;
+}
+
+.social-icons {
+    display: block;
+}
+
+.social-link {
+    display: inline-block;
+    margin-right: 15px;
+    transition: transform 0.3s;
+}
+
+.social-link:hover {
+    transform: scale(1.1);
+}
+
+.social-link img {
+    width: 32px;
+    height: 32px;
+    display: block;
+}
+
+.footer-bottom {
+    border-top: 1px solid #e0e0e0;
+    padding-top: 25px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    margin: 5px 0;
+    font-size: 13px;
+    color: #666;
+}
+
+.footer-bottom p:first-child {
+    font-weight: 600;
+    color: #333;
+}
+
+/* ===== RESPONSIVO ===== */
+@media screen and (max-width: 768px) {
+    .banner-content h1 {
+        font-size: 32px;
+    }
+    
+    .banner-content p {
+        font-size: 16px;
+    }
+    
+    .info-item {
+        width: 48%;
+        margin-right: 4%;
+        margin-bottom: 20px;
+    }
+    
+    .info-item:nth-child(2n) {
+        margin-right: 0;
+    }
+    
+    .form-col {
+        width: 100%;
+        float: none;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    
+    .faq-item {
+        width: 100%;
+        float: none;
+        margin-right: 0;
+    }
+    
+    .footer-coluna {
+        width: 48%;
+        margin-right: 4%;
+    }
+    
+    .footer-coluna:nth-child(2n) {
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .logo img {
+        max-height: 80px;
+    }
+    
+    .banner-content h1 {
+        font-size: 28px;
+    }
+    
+    .info-item {
+        width: 100%;
+        float: none;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    
+    .secao-formulario,
+    .secao-faq {
+        padding: 30px 20px;
+    }
+    
+    .footer-coluna {
+        width: 100%;
+        float: none;
+        margin-right: 0;
+    }
+}
+
