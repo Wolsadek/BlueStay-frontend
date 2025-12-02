@@ -1,0 +1,420 @@
+/* Reset Básico */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+    color: #222;
+    line-height: 1.5;
+}
+
+/* ===== HEADER ===== */
+header {
+    background-color: #ffffff;
+    padding: 20px 30px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+}
+
+/* ===== MAIN ===== */
+main {
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* ===== LADO ESQUERDO ===== */
+.lado-esquerdo {
+    width: 55%;
+    float: left;
+    padding-right: 60px;
+}
+
+/* Voltar */
+.voltar-link {
+    margin-bottom: 30px;
+}
+
+.voltar-link a {
+    color: #222;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.voltar-link a:hover {
+    color: #0077B6;
+}
+
+h1 {
+    font-size: 32px;
+    margin: 0 0 30px 0;
+    color: #222;
+}
+
+/* Seções */
+.secao {
+    padding: 30px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.secao h2 {
+    font-size: 22px;
+    margin: 0 0 20px 0;
+    color: #222;
+}
+
+.secao p {
+    font-size: 16px;
+    color: #717171;
+    margin: 0;
+}
+
+/* Info Linha (Datas e Hóspedes) */
+.info-linha {
+    margin-bottom: 20px;
+}
+
+.info-linha::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.info-label {
+    float: left;
+}
+
+.info-label h3 {
+    font-size: 16px;
+    margin: 0 0 5px 0;
+    font-weight: 600;
+    color: #222;
+}
+
+.info-label p {
+    font-size: 14px;
+    color: #717171;
+    margin: 0;
+}
+
+.editar {
+    float: right;
+    color: #222;
+    text-decoration: underline;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.editar:hover {
+    color: #0077B6;
+}
+
+/* Métodos de Pagamento */
+.metodos-pagamento {
+    margin-bottom: 25px;
+}
+
+.metodo-radio {
+    display: block;
+    padding: 15px 20px;
+    border: 1px solid #d0d0d0;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+
+.metodo-radio:hover {
+    border-color: #222;
+}
+
+.metodo-radio input[type="radio"] {
+    margin-right: 12px;
+    cursor: pointer;
+}
+
+.metodo-radio span {
+    font-size: 16px;
+    color: #222;
+    font-weight: 500;
+}
+
+/* Formulário de Pagamento */
+.form-pagamento {
+    margin-top: 25px;
+}
+
+.form-row {
+    margin-bottom: 0;
+}
+
+.form-row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.form-row .form-group {
+    width: 48%;
+    float: left;
+    margin-right: 4%;
+}
+
+.form-row .form-group:last-child {
+    margin-right: 0;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 8px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #d0d0d0;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #222;
+}
+
+/* Botão Confirmar */
+.btn-confirmar {
+    width: 100%;
+    padding: 18px;
+    background: linear-gradient(135deg, #0077B6 0%, #0076b6ee 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 30px;
+    transition: transform 0.2s;
+}
+
+.btn-confirmar:hover {
+    transform: scale(1.02);
+}
+
+/* ===== LADO DIREITO ===== */
+.lado-direito {
+    width: 40%;
+    float: right;
+}
+
+.card-resumo {
+    position: sticky;
+    top: 20px;
+    border: 1px solid #d0d0d0;
+    border-radius: 12px;
+    padding: 25px;
+    background-color: #ffffff;
+}
+
+/* Apartamento Info */
+.apartamento-info {
+    padding-bottom: 25px;
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 25px;
+}
+
+.apartamento-info::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.apartamento-info img {
+    width: 120px;
+    height: 90px;
+    border-radius: 8px;
+    float: left;
+    margin-right: 15px;
+    object-fit: cover;
+}
+
+.apt-detalhes {
+    float: left;
+    width: calc(100% - 135px);
+}
+
+.apt-detalhes h3 {
+    font-size: 16px;
+    margin: 0 0 5px 0;
+    color: #222;
+}
+
+.apt-detalhes p {
+    font-size: 14px;
+    color: #717171;
+    margin: 0 0 5px 0;
+}
+
+.avaliacao {
+    font-size: 13px;
+}
+
+/* Detalhes de Preço */
+.detalhes-preco {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.detalhes-preco h3 {
+    font-size: 18px;
+    margin: 0 0 20px 0;
+    color: #222;
+}
+
+.linha-preco {
+    margin-bottom: 15px;
+}
+
+.linha-preco::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.linha-preco span:first-child {
+    float: left;
+    font-size: 16px;
+    color: #222;
+}
+
+.linha-preco span:last-child {
+    float: right;
+    font-size: 16px;
+    color: #222;
+}
+
+/* Total */
+.total {
+    padding-top: 20px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.total::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.total strong:first-child {
+    float: left;
+    font-size: 18px;
+    color: #222;
+}
+
+.total strong:last-child {
+    float: right;
+    font-size: 18px;
+    color: #222;
+}
+
+/* ===== RESPONSIVO ===== */
+@media screen and (max-width: 968px) {
+    .lado-esquerdo,
+    .lado-direito {
+        width: 100%;
+        float: none;
+        padding-right: 0;
+    }
+    
+    .lado-direito {
+        margin-top: 40px;
+    }
+    
+    .card-resumo {
+        position: static;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 26px;
+    }
+    
+    .form-row .form-group {
+        width: 100%;
+        float: none;
+        margin-right: 0;
+    }
+    
+    .apartamento-info img {
+        width: 100px;
+        height: 75px;
+    }
+    
+    .apt-detalhes {
+        width: calc(100% - 115px);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    main {
+        padding: 20px 15px;
+    }
+    
+    .logo img {
+        height: 30px;
+    }
+    
+    h1 {
+        font-size: 24px;
+    }
+    
+    .secao h2 {
+        font-size: 20px;
+    }
+    
+    .card-resumo {
+        padding: 20px;
+    }
+    
+    .apartamento-info img {
+        width: 80px;
+        height: 60px;
+    }
+    
+    .apt-detalhes {
+        width: calc(100% - 95px);
+    }
+    
+    .apt-detalhes h3 {
+        font-size: 14px;
+    }
+    
+    .apt-detalhes p {
+        font-size: 13px;
+    }
+}
+

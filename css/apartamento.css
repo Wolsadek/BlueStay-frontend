@@ -338,7 +338,8 @@ h1 {
 }
 
 .botao-reservar {
-    width: 100%;
+    display: block;
+    width: 90%;
     padding: 15px;
     background-color: #0077B6;
     color: white;
@@ -347,6 +348,8 @@ h1 {
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
+    text-decoration: none;
+    text-align: center;
     transition: background-color 0.3s;
 }
 
