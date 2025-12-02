@@ -8,33 +8,117 @@ body {
 
 /* ===== HEADER ===== */
 header {
-    background-color: #0077B6;
+    background-color: #f6f6f6;
     padding: 20px 30px;
     position: relative;
 }
 
-.voltar {
-    background-color: rgba(255, 255, 255, 0.2);
-    color: white;
-    text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 10px;
-    font-size: 16px;
-    font-weight: bold;
-    position: absolute;
-    left: 30px;
-    top: 20px;
-    transition: background-color 0.3s;
+header::after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
-.voltar:hover {
-    background-color: rgba(255, 255, 255, 0.3);
+.logo {
+    float: left;
+    padding-left: 0;
 }
 
-header img {
-    height: 50px;
+.logo img {
+    max-height: 120px;
+    width: auto;
+}
+
+/* Menu Hamburguer */
+.nav-menu {
+    float: right;
+    padding-right: 0;
+    position: relative;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+/* Overlay invisível que fecha o menu ao clicar fora */
+.menu-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    z-index: 999;
+}
+
+.menu-toggle:checked ~ .menu-overlay {
     display: block;
-    margin: 0 auto;
+}
+
+.menu-icon {
+    display: block;
+    width: 35px;
+    height: 30px;
+    position: relative;
+    cursor: pointer;
+    margin-top: 10px;
+    z-index: 1001;
+}
+
+.menu-icon span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #0077B6;
+    margin-bottom: 6px;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.menu-icon span:last-child {
+    margin-bottom: 0;
+}
+
+/* Menu Dropdown */
+.menu-list {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    min-width: 200px;
+    display: none;
+    z-index: 1000;
+}
+
+.menu-toggle:checked ~ .menu-list {
+    display: block;
+}
+
+.menu-list li {
+    list-style: none;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.menu-list li:last-child {
+    border-bottom: none;
+}
+
+.menu-list a {
+    display: block;
+    padding: 15px 20px;
+    color: #333;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.menu-list a:hover {
+    background-color: #f8f9fa;
+    color: #0077B6;
 }
 
 /* ===== MAIN ===== */
@@ -277,45 +361,108 @@ h1 {
     margin-top: 10px;
 }
 
-/* ===== FOOTER ===== */
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 60px;
+/* ===== RODAPÉ ===== */
+
+.main-footer {
+    background-color: #f8f9fa;
+    color: #333;
+    padding: 50px 0 20px 0;
+    margin-top: 80px;
+    border-top: 1px solid #e0e0e0;
 }
 
-footer p {
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Seções do Footer */
+.footer-secoes {
+    display: block;
+    margin-bottom: 40px;
+}
+
+.footer-secoes::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.footer-coluna {
+    width: 23%;
+    float: left;
+    margin-right: 2.5%;
+    margin-bottom: 30px;
+}
+
+.footer-coluna:last-child {
+    margin-right: 0;
+}
+
+.footer-coluna h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.footer-coluna ul {
+    list-style: none;
+    padding: 0;
     margin: 0;
+}
+
+.footer-coluna li {
+    margin-bottom: 10px;
+}
+
+.footer-coluna a {
+    color: #666;
+    text-decoration: none;
     font-size: 14px;
+    transition: color 0.3s;
 }
 
-/* ===== RESPONSIVO ===== */
-@media screen and (max-width: 768px) {
-    .info-esquerda,
-    .info-direita {
-        width: 100%;
-        float: none;
-        padding-right: 0;
-    }
-    
-    .info-direita {
-        margin-top: 30px;
-    }
-    
-    .card-reserva {
-        position: static;
-    }
-    
-    .fotos-pequenas img {
-        width: 49%;
-        margin-bottom: 10px;
-    }
-    
-    .caracteristicas .item {
-        width: 48%;
-        margin-bottom: 20px;
-    }
+.footer-coluna a:hover {
+    color: #0077B6;
 }
 
+/* Redes Sociais */
+.social-icons {
+    display: block;
+}
+
+.social-link {
+    display: inline-block;
+    margin-right: 15px;
+    transition: transform 0.3s;
+}
+
+.social-link:hover {
+    transform: scale(1.1);
+}
+
+.social-link img {
+    width: 32px;
+    height: 32px;
+    display: block;
+}
+
+/* Linha de Copyright */
+.footer-bottom {
+    border-top: 1px solid #e0e0e0;
+    padding-top: 25px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    margin: 5px 0;
+    font-size: 13px;
+    color: #666;
+}
+
+.footer-bottom p:first-child {
+    font-weight: 600;
+    color: #333;
+}
