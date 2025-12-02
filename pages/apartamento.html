@@ -9,8 +9,28 @@
 <body>
     
     <header>
-        <a href="../index.html" class="voltar">Voltar</a>
-        <img src="../img/logoSfundo.png" alt="BlueStay Logo">
+        <div class="logo">
+            <a href="../index.html">
+                <img src="../img/logoSfundo.png" alt="BlueStay Logo">
+            </a>
+        </div>
+
+        <nav class="nav-menu">
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            
+            <label for="menu-toggle" class="menu-overlay"></label>
+            
+            <ul class="menu-list">
+                <li><a href="login.html">Entrar</a></li>
+                <li><a href="cadastro.html">Cadastrar-se</a></li>
+                <li><a href="suporte.html">Central de Ajuda</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
@@ -111,9 +131,67 @@
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2025 BlueStay - Todos os direitos reservados</p>
-    </footer>
+        <!-- RODAPÉ -->
+        <footer class="main-footer">
+            <div class="footer-container">
+                <!-- Seções do Footer -->
+                <div class="footer-secoes">
+                    <!-- Coluna 1: Atendimento -->
+                    <div class="footer-coluna">
+                        <h3>Atendimento</h3>
+                        <ul>
+                            <li><a href="pages/suporte.html">Central de Ajuda</a></li>
+                            <li><a href="#faq">Perguntas Frequentes</a></li>
+                            <li><a href="#contato">Fale Conosco</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Coluna 2: BlueStay -->
+                    <div class="footer-coluna">
+                        <h3>BlueStay</h3>
+                        <ul>
+                            <li><a href="pages/quem-somos.html">Quem Somos</a></li>
+                            <li><a href="#seguranca">É Seguro?</a></li>
+                            <li><a href="#politica">Política de Privacidade</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Coluna 3: Hospedagem -->
+                    <div class="footer-coluna">
+                        <h3>Hospedagem</h3>
+                        <ul>
+                            <li><a href="#anuncie">Anuncie seu Imóvel</a></li>
+                            <li><a href="#guia">Guia Turístico</a></li>
+                            <li><a href="#pagamento">Formas de Pagamento</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Coluna 4: Redes Sociais -->
+                    <div class="footer-coluna">
+                        <h3>Redes Sociais</h3>
+                        <div class="social-icons">
+                            <a href="https://facebook.com" target="_blank" class="social-link" aria-label="Facebook">
+                                <img src="https://cdn-icons-png.flaticon.com/32/733/733547.png" alt="Facebook">
+                            </a>
+                            <a href="https://instagram.com" target="_blank" class="social-link" aria-label="Instagram">
+                                <img src="https://cdn-icons-png.flaticon.com/32/174/174855.png" alt="Instagram">
+                            </a>
+                            <a href="https://twitter.com" target="_blank" class="social-link" aria-label="X/Twitter">
+                                <img src="https://cdn-icons-png.flaticon.com/32/733/733579.png" alt="X">
+                            </a>
+                            <a href="https://wa.me/5521999999999" target="_blank" class="social-link" aria-label="WhatsApp">
+                                <img src="https://cdn-icons-png.flaticon.com/32/733/733585.png" alt="WhatsApp">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Linha de Copyright -->
+                <div class="footer-bottom">
+                    <p>&copy; 2025 BlueStay - Todos os direitos reservados</p>
+                </div>
+            </div>
+        </footer>
 
 </body>
 </html>
