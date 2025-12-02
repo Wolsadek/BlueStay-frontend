@@ -65,7 +65,7 @@ main {
 }
 
 .fotos-pequenas img {
-    width: 24%;
+    width: 20%;
     height: 190px;
     border-radius: 10px;
     object-fit: cover;
@@ -86,12 +86,12 @@ main {
 .info-esquerda {
     width: 65%;
     float: left;
-    padding-right: 40px;
 }
 
 .info-direita {
     width: 35%;
     float: right;
+    margin-top: 100px;
 }
 
 /* Clearfix */

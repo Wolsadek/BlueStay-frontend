@@ -308,7 +308,7 @@ main {
 
 .card {
     display: inline-block;
-    width: 183px;
+    width: 230px;
     margin-right: 20px;
     vertical-align: top;
     white-space: normal;
@@ -323,8 +323,8 @@ main {
 
 /* Imagem do Card */
 .card-image {
-    width: 183px;
-    height: 173px;
+    width: 230px;
+    height: 220px;
     overflow: hidden;
     background-color: #f0f0f0;
     border-radius: 12px;
