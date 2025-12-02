@@ -371,11 +371,11 @@ main {
 /* ===== RODAPÉ ===== */
 
 .main-footer {
-    background-color: #333;
-    color: #ffffff;
-    padding: 40px 0;
-    text-align: center;
-    margin-top: 60px;
+    background-color: #f8f9fa;
+    color: #333;
+    padding: 50px 0 20px 0;
+    margin-top: 80px;
+    border-top: 1px solid #e0e0e0;
 }
 
 .footer-container {
@@ -384,14 +384,94 @@ main {
     padding: 0 20px;
 }
 
-.footer-container p {
-    margin-bottom: 10px;
-    font-size: 14px;
+/* Seções do Footer */
+.footer-secoes {
+    display: block;
+    margin-bottom: 40px;
 }
 
-.footer-container p:last-child {
-    margin-bottom: 0;
-    color: #999;
+.footer-secoes::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.footer-coluna {
+    width: 23%;
+    float: left;
+    margin-right: 2.5%;
+    margin-bottom: 30px;
+}
+
+.footer-coluna:last-child {
+    margin-right: 0;
+}
+
+.footer-coluna h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.footer-coluna ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-coluna li {
+    margin-bottom: 10px;
+}
+
+.footer-coluna a {
+    color: #666;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.footer-coluna a:hover {
+    color: #0077B6;
+}
+
+/* Redes Sociais */
+.social-icons {
+    display: block;
+}
+
+.social-link {
+    display: inline-block;
+    margin-right: 15px;
+    transition: transform 0.3s;
+}
+
+.social-link:hover {
+    transform: scale(1.1);
+}
+
+.social-link img {
+    width: 32px;
+    height: 32px;
+    display: block;
+}
+
+/* Linha de Copyright */
+.footer-bottom {
+    border-top: 1px solid #e0e0e0;
+    padding-top: 25px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    margin: 5px 0;
+    font-size: 13px;
+    color: #666;
+}
+
+.footer-bottom p:first-child {
+    font-weight: 600;
+    color: #333;
 }
 
 /* ===== RESPONSIVIDADE ===== */
@@ -446,6 +526,16 @@ main {
         width: 160px;
         height: 150px;
     }
+    
+    /* Footer */
+    .footer-coluna {
+        width: 48%;
+        margin-right: 4%;
+    }
+    
+    .footer-coluna:nth-child(2n) {
+        margin-right: 0;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -476,5 +566,13 @@ main {
     
     .card-price {
         font-size: 16px;
+    }
+    
+    /* Footer */
+    .footer-coluna {
+        width: 100%;
+        float: none;
+        margin-right: 0;
+        margin-bottom: 25px;
     }
 }
