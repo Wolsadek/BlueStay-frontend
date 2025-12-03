@@ -32,7 +32,17 @@ img {
 .main-header {
     background-color: #f6f6f6;
     padding: 20px 0;
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: padding 0.3s ease, height 0.3s ease;
+}
+
+.main-header.scrolled {
+    padding: 10px 0;
 }
 
 .header-container {
@@ -154,6 +164,96 @@ img {
     padding: 40px 0;
     margin-bottom: 50px;
     border-bottom: 1px solid #e0e0e0;
+    position: fixed;
+    top: 160px;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    width: 100%;
+    transition: top 0.3s ease, padding 0.3s ease;
+}
+
+.search-section.scrolled {
+    top: 0;
+    padding: 10px 0;
+}
+
+/* Ao ficar fixo no topo: ocupa posição fixa e preenche o container; mantém todos os campos visíveis */
+.search-section.scrolled .search-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.search-section.scrolled .search-form {
+    transform: none;
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    width: 100%;
+}
+
+.search-section.scrolled .search-field {
+    padding: 10px 18px;
+}
+
+.search-section.scrolled .search-field label {
+    display: block;
+}
+
+.search-section.scrolled .search-field input,
+.search-section.scrolled .search-field select {
+    font-size: 14px;
+    padding: 6px 0;
+}
+
+.search-section.scrolled .search-btn {
+    padding: 12px 22px;
+    width: auto;
+}
+
+/* classe adicional para o form quando compactado (fallback se quiser utilizar) */
+.search-form.compact {
+    transform: scale(0.95);
+    transform-origin: center top;
+}
+
+/* Compactar mantendo apenas o campo 'Onde' visível */
+
+.search-form.compact-dest {
+    display: table;
+    width: 100%;
+}
+
+/* manter campos visíveis no modo compacto, mas reduzir espaçamento */
+.search-form.compact-dest .search-field {
+    display: table-cell;
+    padding: 10px 16px;
+    border-right: 1px solid #e0e0e0;
+    vertical-align: middle;
+}
+
+.search-form.compact-dest .search-field:last-of-type {
+    border-right: none;
+}
+
+.search-form.compact-dest .search-btn {
+    padding: 10px 20px;
+    border-radius: 40px;
+}
+
+/* Responsivo: garantir bom comportamento em telas pequenas */
+@media screen and (max-width: 768px) {
+    .search-form.compact-dest .search-field:first-of-type {
+        flex: 1 1 auto;
+        width: auto;
+        padding-left: 12px;
+    }
+
+    .search-form.compact-dest {
+        gap: 10px;
+        padding: 6px 10px;
+    }
 }
 
 .search-container {
@@ -169,6 +269,7 @@ img {
     border-radius: 20px;
     box-shadow: -6px 2px 19.5px 5px rgba(0, 0, 0, 0.25);
     display: table;
+    transition: transform 0.3s ease;
 }
 
 .search-field {
@@ -247,6 +348,8 @@ main {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px 60px 20px;
+    margin-top: 320px;
+    transition: margin-top 0.3s ease;
 }
 
 .category-section {
