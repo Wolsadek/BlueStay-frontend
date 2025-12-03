@@ -558,5 +558,36 @@
             </div>
         </footer>
 
+        <script>
+            // Mostra apenas o campo "Onde" + botão quando o usuário rolar para baixo
+            let lastScrollTop = 0;
+            const header = document.querySelector('.main-header');
+            const searchSection = document.querySelector('.search-section');
+            const logo = document.querySelector('.logo');
+            const navMenu = document.querySelector('.nav-menu');
+            const searchForm = document.querySelector('.search-form');
+
+            window.addEventListener('scroll', function() {
+                let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+                if (scrollTop > 50) {
+                    // Esconde completamente o header e fixa a barra de busca no topo (tudo visível)
+                    header.style.display = 'none';
+                    searchSection.classList.add('scrolled');
+                    searchForm.classList.add('compact');
+                    // garante que o form use o layout completo
+                    searchForm.classList.add('compact-dest');
+                } else {
+                    // Volta ao estado normal
+                    header.style.display = '';
+                    searchSection.classList.remove('scrolled');
+                    searchForm.classList.remove('compact');
+                    searchForm.classList.remove('compact-dest');
+                }
+
+                lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+            });
+        </script>
+
     </body>
 </html>
