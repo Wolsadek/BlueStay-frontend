@@ -3,161 +3,219 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagamento - BlueStay</title>
-    <link rel="stylesheet" href="../css/pagamento.css">
+    <title>Reservando Apartamento</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #0088cc 0%, #0066aa 100%);
+            height: 160px;
+            width: 100%;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            color: #333;
+            font-weight: 400;
+            letter-spacing: 2px;
+        }
+
+        .booking-card {
+            background: white;
+            border: 2px solid #ddd;
+            padding: 40px;
+            display: flex;
+            gap: 40px;
+            align-items: flex-start;
+        }
+
+        .left-section {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .apartment-preview {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .apartment-image {
+            width: 220px;
+            height: 150px;
+            background-color: #d5d5d5;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #888;
+            font-size: 0.95em;
+        }
+
+        .apartment-info {
+            flex: 1;
+        }
+
+        .apartment-info h2 {
+            font-size: 1.5em;
+            color: #333;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+
+        .price {
+            font-size: 1.4em;
+            color: #666;
+            font-weight: 400;
+        }
+
+        .description {
+            color: #999;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        .right-section {
+            width: 320px;
+            border: 1px solid #ddd;
+            padding: 25px;
+            background: #fafafa;
+        }
+
+        .info-group {
+            margin-bottom: 20px;
+        }
+
+        .info-label {
+            color: #333;
+            font-weight: 500;
+            margin-bottom: 5px;
+            font-size: 0.95em;
+        }
+
+        .info-value {
+            color: #666;
+            font-size: 0.95em;
+        }
+
+        .phone-input {
+            margin-top: 8px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1em;
+            width: 100%;
+        }
+
+        .final-price {
+            font-size: 1.6em;
+            color: #666;
+            text-align: center;
+            margin: 25px 0;
+            font-weight: 400;
+        }
+
+        .pay-button {
+            width: 100%;
+            padding: 15px;
+            background: #0088cc;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1em;
+            font-weight: 600;
+            cursor: pointer;
+            letter-spacing: 1px;
+            transition: background 0.3s;
+        }
+
+        .pay-button:hover {
+            background: #006ba3;
+        }
+
+        @media (max-width: 768px) {
+            .booking-card {
+                flex-direction: column;
+            }
+
+            .apartment-preview {
+                flex-direction: column;
+            }
+
+            .apartment-image {
+                width: 100%;
+            }
+
+            .right-section {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
+    <div class="header"></div>
     
-    <header>
-        <div class="logo">
-            <a href="../index.html">
-                <img src="../img/logoSfundo.png" alt="BlueStay Logo">
-            </a>
-        </div>
-    </header>
-
-    <main>
-        <div class="container">
-            
-            <!-- Lado Esquerdo -->
-            <div class="lado-esquerdo">
+    <div class="container">
+        <h1>RESERVANDO...</h1>
+        
+        <div class="booking-card">
+            <div class="left-section">
+                <div class="apartment-preview">
+                    <div class="apartment-image">foto do ap</div>
+                    <div class="apartment-info">
+                        <h2>Apartamento em<br>Madureira - RJ</h2>
+                        <div class="price">R$879,90/mês</div>
+                    </div>
+                </div>
                 
-                <!-- Voltar -->
-                <div class="voltar-link">
-                    <a href="../pages/apartamento.html">← Voltar</a>
-                </div>
-
-                <h1>Solicitar Reserva</h1>
-
-                <!-- Sua Viagem -->
-                <section class="secao">
-                    <h2>Sua viagem</h2>
-                    
-                    <div class="info-linha">
-                        <div class="info-label">
-                            <h3>Datas</h3>
-                            <p>2 - 7 de dez.</p>
-                        </div>
-                        <a href="#" class="editar">Editar</a>
-                    </div>
-
-                    <div class="info-linha">
-                        <div class="info-label">
-                            <h3>Hóspedes</h3>
-                            <p>1 hóspede</p>
-                        </div>
-                        <a href="#" class="editar">Editar</a>
-                    </div>
-                </section>
-
-                <!-- Informações de Pagamento -->
-                <section class="secao">
-                    <h2>Pagar com</h2>
-                    
-                    <div class="metodos-pagamento">
-                        <label class="metodo-radio">
-                            <input type="radio" name="metodo" value="cartao" checked>
-                            <span>Cartão de crédito ou débito</span>
-                        </label>
-                        
-                        <label class="metodo-radio">
-                            <input type="radio" name="metodo" value="pix">
-                            <span>PIX</span>
-                        </label>
-                        
-                        <label class="metodo-radio">
-                            <input type="radio" name="metodo" value="boleto">
-                            <span>Boleto bancário</span>
-                        </label>
-                    </div>
-
-                    <form class="form-pagamento">
-                        <div class="form-group">
-                            <label for="numero-cartao">Número do cartão</label>
-                            <input type="text" id="numero-cartao" placeholder="0000 0000 0000 0000" required>
-                        </div>
-
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="validade">Validade</label>
-                                <input type="text" id="validade" placeholder="MM/AA" required>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="cvv">CVV</label>
-                                <input type="text" id="cvv" placeholder="123" maxlength="3" required>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="nome-cartao">Nome no cartão</label>
-                            <input type="text" id="nome-cartao" placeholder="Nome como está no cartão" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="cpf">CPF</label>
-                            <input type="text" id="cpf" placeholder="000.000.000-00" required>
-                        </div>
-                    </form>
-                </section>
-
-                <!-- Política de Cancelamento -->
-                <section class="secao">
-                    <h2>Política de cancelamento</h2>
-                    <p>Cancelamento gratuito até 48 horas antes do check-in. Cancele antes de 2 de dez. para receber reembolso total.</p>
-                </section>
-
-                <!-- Botão Confirmar -->
-                <button class="btn-confirmar">Confirmar e pagar</button>
-
-            </div>
-
-            <!-- Lado Direito -->
-            <div class="lado-direito">
-                <div class="card-resumo">
-                    
-                    <!-- Apartamento -->
-                    <div class="apartamento-info">
-                        <img src="../img/apartamentos/1.jpg" alt="Apartamento">
-                        <div class="apt-detalhes">
-                            <h3>Apartamento em Madureira - RJ</h3>
-                            <p>Espaço inteiro: apartamento</p>
-                            <p class="avaliacao">★ 4.97 (119 comentários) · Superhost</p>
-                        </div>
-                    </div>
-
-                    <!-- Detalhes de Preço -->
-                    <div class="detalhes-preco">
-                        <h3>Informações de preço</h3>
-                        
-                        <div class="linha-preco">
-                            <span>R$ 879,90 x 5 noites</span>
-                            <span>R$ 4.399,50</span>
-                        </div>
-
-                        <div class="linha-preco">
-                            <span>Taxa de limpeza</span>
-                            <span>R$ 150,00</span>
-                        </div>
-
-                        <div class="linha-preco">
-                            <span>Taxa de serviço BlueStay</span>
-                            <span>R$ 227,50</span>
-                        </div>
-                    </div>
-
-                    <!-- Total -->
-                    <div class="total">
-                        <strong>Total (BRL)</strong>
-                        <strong>R$ 4.777,00</strong>
-                    </div>
-
+                <div class="description">
+                    Info: Apartamento completo mobiliado<br>
+                    em Madureira Rio de Janeiro
                 </div>
             </div>
-
+            
+            <div class="right-section">
+                <div class="info-group">
+                    <div class="info-label">Seu Imóvel:</div>
+                </div>
+                
+                <div class="info-group">
+                    <div class="info-label">Fim do contrato:</div>
+                    <div class="info-value">25/12/2025 a 03/08/2027</div>
+                </div>
+                
+                <div class="info-group">
+                    <div class="info-label">Hóspedes: <span class="info-value">2 Hóspede</span></div>
+                </div>
+                
+                <div class="info-group">
+                    <div class="info-label">Digite seu telefone:</div>
+                    <input type="tel" class="phone-input" placeholder="( )9" value="( )9">
+                </div>
+                
+                <div class="final-price">R$879,90/mês</div>
+                
+                <button class="pay-button">PAGAR</button>
+            </div>
         </div>
-    </main>
-
+    </div>
 </body>
 </html>
-
